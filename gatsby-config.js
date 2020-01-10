@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Sydney Clarinet Choir',
   },
+  pathPrefix: '/scc',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,6 +1,4 @@
 import React from 'react'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 
 import { Button, Container, Divider } from 'semantic-ui-react'
 import Layout from '../components/layout'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button, Message } from 'semantic-ui-react'
+import { Form, Button, Message, Container } from 'semantic-ui-react'
 
 export default function ContactForm() {
   const [status, setStatus] = useState('')
@@ -32,6 +32,7 @@ export default function ContactForm() {
 
   return (
     <Form
+      style={{ margin: 'auto auto' }}
       onSubmit={ev => submitForm(ev)}
       action="https://formspree.io/mlejevka"
       method="POST"

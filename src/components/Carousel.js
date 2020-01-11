@@ -1,17 +1,15 @@
-import React from 'react'
-import Slider from 'react-slick'
+import React, { useEffect, useState } from 'react'
 
-import { Image, Container } from 'semantic-ui-react'
-
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import { Image, Container, Button, Icon } from 'semantic-ui-react'
 
 import styled from 'styled-components'
 
 import { graphql, useStaticQuery } from 'gatsby'
 
-export default function Carousel() {
-  const { allFile } = useStaticQuery(graphql`
+import Carousel from 'nuka-carousel'
+
+export default function CarouselComponent() {
+  const data = useStaticQuery(graphql`
     query {
       allFile(filter: { absolutePath: { regex: "/(carousel)/" } }) {
         edges {
@@ -27,38 +25,48 @@ export default function Carousel() {
     }
   `)
 
-  const images = allFile.edges
+  useEffect(() => console.log('The thing happened'), data)
 
-  console.log(images)
+  console.log(data)
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    arrows: true,
-    centerMode: true,
-  }
+  const images = data.allFile.edges
 
   const CarouselImage = styled.div`
     background: url(${props => props.src});
-    height: 70vh;
-    width: 100%;
+    height: 50vh;
+    width: auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   `
 
   return (
-    <Slider {...settings}>
+    <Carousel
+      heightMode="first"
+      width="100%"
+      style={{ margin: 'auto', maxWidth: '90vw' }}
+      renderCenterLeftControls={({ previousSlide }) => (
+        <Icon
+          size="big"
+          name="arrow alternate circle left outline"
+          style={{ cursor: 'pointer' }}
+          onClick={previousSlide}
+          color="grey"
+        />
+      )}
+      renderCenterRightControls={({ nextSlide }) => (
+        <Icon
+          size="big"
+          name="arrow alternate circle right outline"
+          style={{ cursor: 'pointer' }}
+          onClick={nextSlide}
+          color="grey"
+        />
+      )}
+    >
       {images.map(i => (
-        <Container fluid>
-          <CarouselImage src={i.node.publicURL} />
-          {/* <Image size="big" src={i.node.publicURL} /> */}
-        </Container>
+        <CarouselImage src={i.node.publicURL} />
       ))}
-    </Slider>
+    </Carousel>
   )
 }

@@ -35,7 +35,7 @@ export default function CarouselComponent() {
   const images = data.allFile.edges
 
   const CarouselImage = styled.div`
-    background: url(${props => siteURL + props.src});
+    background: url(${props => props.src});
     height: 50vh;
     width: auto;
     background-size: contain;

@@ -13,7 +13,6 @@ export default function ContactForm() {
     const data = new FormData(form)
     const xhr = new XMLHttpRequest()
     xhr.open(form.method, form.action)
-    console.log('in the methdos', form)
     xhr.setRequestHeader('Accept', 'application/json')
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return
@@ -26,7 +25,6 @@ export default function ContactForm() {
       }
       setButtonLoading(false)
     }
-    console.log(xhr.status)
     xhr.send(data)
   }
 

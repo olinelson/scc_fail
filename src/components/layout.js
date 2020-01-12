@@ -47,36 +47,37 @@ const Layout = ({ children, location }) => (
 
         <Divider hidden />
 
-        <Divider />
+        <Divider hidden />
+        <div>
+          <Container textAlign="center">
+            {/* <Image centered size="tiny" src="logos/logo.png" /> */}
+            <h4>Sydney Clarinet Choir</h4>
 
-        <Container textAlign="center">
-          {/* <Image centered size="tiny" src="logos/logo.png" /> */}
-          <h4>Sydney Clarinet Choir</h4>
-
-          <List horizontal inverted={false} divided link size="small">
-            <List.Item as={Link} to="/">
-              Home
-            </List.Item>
-            <List.Item as={Link} to="/about">
-              About
-            </List.Item>
-            <List.Item as={Link} to="/contact">
-              Contact
-            </List.Item>
-            <List.Item as={Link} to="/gallery">
-              Gallery
-            </List.Item>
-            <List.Item as={Link} to="/recordings">
-              Recordings
-            </List.Item>
-          </List>
-          <Divider hidden />
-          <small style={{ color: 'grey' }}>
-            <Icon name="copyright" />
-            {new Date().getFullYear()}
-          </small>
-          <Divider hidden />
-        </Container>
+            <List horizontal inverted={false} divided link size="small">
+              <List.Item as={Link} to="/">
+                Home
+              </List.Item>
+              <List.Item as={Link} to="/about">
+                About
+              </List.Item>
+              <List.Item as={Link} to="/contact">
+                Contact
+              </List.Item>
+              <List.Item as={Link} to="/gallery">
+                Gallery
+              </List.Item>
+              <List.Item as={Link} to="/recordings">
+                Recordings
+              </List.Item>
+            </List>
+            <Divider hidden />
+            <small style={{ color: 'grey' }}>
+              <Icon name="copyright" />
+              {new Date().getFullYear()}
+            </small>
+            <Divider hidden />
+          </Container>
+        </div>
       </SiteContainer>
     )}
   />

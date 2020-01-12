@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button, Message, Container } from 'semantic-ui-react'
+import { Form, Button, Message } from 'semantic-ui-react'
 
 export default function ContactForm() {
   const [status, setStatus] = useState('')

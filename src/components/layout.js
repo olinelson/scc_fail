@@ -2,32 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import {
-  Container,
-  Grid,
-  Menu,
-  Icon,
-  Segment,
-  Divider,
-  Responsive,
-  Image,
-  List,
-} from 'semantic-ui-react'
-import styled from 'styled-components'
+import { Container, Icon, Divider, Responsive, List } from 'semantic-ui-react'
 
 import Header from './header'
 
 import 'semantic-ui-less/semantic.less'
 
-import {
-  SiteContainer,
-  Footer,
-  LinkedItem,
-} from '../components/styledComponents'
+import { SiteContainer } from '../components/styledComponents'
 
-const d = new Date()
-
-const Layout = ({ children, data, location }) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

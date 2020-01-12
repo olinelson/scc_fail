@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-import { Image, Container, Button, Icon } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 
 import styled from 'styled-components'
 

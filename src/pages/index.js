@@ -1,15 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
-import {
-  Button,
-  Container,
-  Segment,
-  Divider,
-  Icon,
-  Search,
-  Grid,
-  Header,
-} from 'semantic-ui-react'
+import { Button, Container, Divider } from 'semantic-ui-react'
 import Layout from '../components/layout'
 
 import clarinetsImage from '../images/resources/clarinets.jpg'
@@ -70,13 +61,6 @@ const IndexPage = ({ location }) => (
         <Divider hidden />
       </Container>
     </Layout>
-    {/* •	Generous display of name in full and logo
-•	News (copy to be supplied, but we envisage info like testimonials, clarinet news, member news, guest artists, links to friends and associates including sponsor retailers)
-•	Events
-o	upcoming concerts
-o	past concerts
-•	Book SCC
-•	Play with SCC */}
   </>
 )
 

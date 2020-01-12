@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link, navigate } from 'gatsby'
-import { Item, Image } from 'semantic-ui-react'
+import { Item } from 'semantic-ui-react'
 
 export default function NewsPreview() {
   const data = useStaticQuery(graphql`

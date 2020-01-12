@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { Container, Item, Divider } from 'semantic-ui-react'
+import { Container, Divider } from 'semantic-ui-react'
 import { Jumbotron } from '../components/styledComponents'
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.

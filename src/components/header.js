@@ -1,16 +1,6 @@
 import React, { useState } from 'react'
 import { Link, navigate } from 'gatsby'
-import {
-  Container,
-  Menu,
-  Divider,
-  Responsive,
-  Sidebar,
-  Segment,
-  Icon,
-  Image,
-  Header,
-} from 'semantic-ui-react'
+import { Menu, Responsive, Sidebar, Icon } from 'semantic-ui-react'
 
 function Nav({ siteTitle }) {
   const [visible, setVisible] = useState(false)

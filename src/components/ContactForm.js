@@ -44,14 +44,14 @@ export default function ContactForm() {
         required
         label="Full Name"
         name="name"
-        placeholder="Carl Jung"
+        placeholder="Wolfgang Amadeus Mozart"
       />
       <Form.Input
         required
         label="Email"
         name="email"
         type="email"
-        placeholder="carl_jung@gmail.com"
+        placeholder="wolfy@gmail.com"
       />
       <Form.Input
         required

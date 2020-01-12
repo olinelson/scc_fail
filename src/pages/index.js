@@ -18,6 +18,7 @@ import {
   JumboHeader,
 } from '../components/styledComponents'
 import Events from '../components/Events'
+import { Link } from 'gatsby'
 
 const IndexPage = () => (
   <>
@@ -38,7 +39,9 @@ const IndexPage = () => (
 
         <Jumbotron src="https://st4.depositphotos.com/1020618/27307/i/450/depositphotos_273076392-stock-photo-clarinet-during-a-classical-concert.jpg">
           <JumboMessage>
-            <Button size="massive">Play with SCC</Button>
+            <Button as={Link} to="/contact" size="massive">
+              Play with SCC
+            </Button>
           </JumboMessage>
         </Jumbotron>
 
@@ -53,7 +56,7 @@ const IndexPage = () => (
 
         <Jumbotron src="https://s3.eu-central-1.amazonaws.com/heek-media/images/industries/music/music-woods-instruments/cover-2.jpg">
           <JumboMessage>
-            <Button color="yellow" size="massive">
+            <Button as={Link} to="/contact" color="yellow" size="massive">
               Book SCC
             </Button>
           </JumboMessage>

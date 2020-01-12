@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import {
   Container,
   Grid,
@@ -9,15 +9,21 @@ import {
   Icon,
   Segment,
   Divider,
+  Responsive,
+  Image,
+  List,
 } from 'semantic-ui-react'
 import styled from 'styled-components'
 
 import Header from './header'
 
 import 'semantic-ui-less/semantic.less'
-import { Link } from 'gatsby'
 
-import { SiteContainer, Footer } from '../components/styledComponents'
+import {
+  SiteContainer,
+  Footer,
+  LinkedItem,
+} from '../components/styledComponents'
 
 const d = new Date()
 
@@ -45,16 +51,48 @@ const Layout = ({ children, data }) => (
 
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <Container fluid>{children}</Container>
+          {window.location.pathname !== '/' ? (
+            <Responsive
+              as={Divider}
+              maxWidth={Responsive.onlyTablet.maxWidth}
+            />
+          ) : null}
+
+          <div>{children}</div>
         </div>
 
         <Divider hidden />
 
-        <Footer>
-          <small>
-            <Icon name="copyright" /> SCC {d.getFullYear()}
+        <Divider />
+
+        <Container textAlign="center">
+          {/* <Image centered size="tiny" src="logos/logo.png" /> */}
+          <h4>Sydney Clarinet Choir</h4>
+
+          <List horizontal inverted={false} divided link size="small">
+            <List.Item as={Link} to="/">
+              Home
+            </List.Item>
+            <List.Item as={Link} to="/about">
+              About
+            </List.Item>
+            <List.Item as={Link} to="/contact">
+              Contact
+            </List.Item>
+            <List.Item as={Link} to="/gallery">
+              Gallery
+            </List.Item>
+            <List.Item as={Link} to="/recordings">
+              Recordings
+            </List.Item>
+          </List>
+          <Divider hidden />
+          <small style={{ color: 'grey' }}>
+            <Icon name="copyright" />
+            {new Date().getFullYear()}
           </small>
-        </Footer>
+          <Divider hidden />
+        </Container>
       </SiteContainer>
     )}
   />

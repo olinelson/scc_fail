@@ -7,7 +7,6 @@ import ContactForm from '../components/ContactForm'
 const Contact = () => (
   <Layout>
     <Container text>
-      <Divider hidden />
       <ContactForm />
     </Container>
   </Layout>

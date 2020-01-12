@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { Header } from 'semantic-ui-react'
+import { Header, Menu, Link } from 'semantic-ui-react'
+import React from 'react'
 
 export const JumboHeader = styled(Header)`
   font-size: 5rem;

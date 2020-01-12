@@ -17,7 +17,7 @@ export const Jumbotron = styled.div`
     background-repeat: no-repeat !important;
     // background: ${props => `url('${props.src}')`};
     // to work with  github /scc hosting
-    background: ${props => `url('scc/${props.src}')`};
+    background: ${props => `url('${props.src}')`};
       
 
 

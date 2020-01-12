@@ -29,6 +29,11 @@ export default function NewsPreview() {
           }
         }
       }
+      site {
+        siteMetadata {
+          siteURL
+        }
+      }
     }
   `)
 
@@ -50,7 +55,10 @@ export default function NewsPreview() {
 
           return (
             <Item onClick={() => navigate(path)}>
-              <Item.Image size="small" src={foundImage.node.publicURL} />
+              <Item.Image
+                size="small"
+                src={data.site.siteMetadata.siteURL + foundImage.node.publicURL}
+              />
 
               <Item.Content>
                 <Item.Header as="a">{title}</Item.Header>

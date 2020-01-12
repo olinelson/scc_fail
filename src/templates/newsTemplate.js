@@ -15,7 +15,9 @@ export default function Template({
 
   return (
     <Layout>
-      <Jumbotron src={foundImage.node.publicURL} />
+      <Jumbotron
+        src={data.site.siteMetadata.siteURL + foundImage.node.publicURL}
+      />
       <Divider hidden />
       <Container text>
         <h1>{frontmatter.title}</h1>
@@ -56,6 +58,11 @@ export const pageQuery = graphql`
           modifiedTime
           publicURL
         }
+      }
+    }
+    site {
+      siteMetadata {
+        siteURL
       }
     }
   }

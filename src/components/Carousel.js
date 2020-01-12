@@ -22,17 +22,20 @@ export default function CarouselComponent() {
           }
         }
       }
+      site {
+        siteMetadata {
+          siteURL
+        }
+      }
     }
   `)
 
-  useEffect(() => console.log('The thing happened'), data)
-
-  console.log(data)
+  let siteURL = data.site.siteMetadata.siteURL
 
   const images = data.allFile.edges
 
   const CarouselImage = styled.div`
-    background: url(${props => props.src});
+    background: url(${props => siteURL + props.src});
     height: 50vh;
     width: auto;
     background-size: contain;
@@ -65,7 +68,7 @@ export default function CarouselComponent() {
       )}
     >
       {images.map(i => (
-        <CarouselImage src={i.node.publicURL} />
+        <CarouselImage src={siteURL + i.node.publicURL} />
       ))}
     </Carousel>
   )

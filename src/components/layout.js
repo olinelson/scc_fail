@@ -34,7 +34,7 @@ const Layout = ({ children, data, location }) => (
         site {
           siteMetadata {
             title
-            siteUrl
+            siteURL
           }
         }
       }
@@ -42,7 +42,6 @@ const Layout = ({ children, data, location }) => (
     render={data => (
       <SiteContainer>
         <div>
-          {console.log(data.site.siteMetadata.siteUrl)}
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[

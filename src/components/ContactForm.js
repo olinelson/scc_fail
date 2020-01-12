@@ -73,12 +73,12 @@ export default function ContactForm() {
       <Message
         success
         header="Message Sent"
-        content="You're email has been sent. Thankyou"
+        content="Your email has been sent. Thankyou"
       />
       <Message
         error
         header="Action Forbidden"
-        content="Something went wrong :("
+        content="Something went wrong, please try again..."
       />
     </Form>
   )

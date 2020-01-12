@@ -15,7 +15,7 @@ export const Jumbotron = styled.div`
     background-size: ${props =>
       props.contain ? 'contain !important' : 'cover !important'};
     background-repeat: no-repeat !important;
-     background: ${props => `url('${props.src}')`};
+     background: ${props => `url('${window.location.origin + props.src}')`};
      height: ${props => (props.fullHeight ? '85vh !important' : '50vh')};
     display: grid;
 }

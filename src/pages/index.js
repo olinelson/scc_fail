@@ -19,12 +19,13 @@ import {
 } from '../components/styledComponents'
 import Events from '../components/Events'
 import { Link } from 'gatsby'
+import NewsPreview from '../components/NewsPreview'
 
 const IndexPage = () => (
   <>
     <Layout>
       <div style={{ margin: '0 auto', maxWidth: '100rem' }}>
-        <Jumbotron fullHeight src={`images/clarinets.jpg`}>
+        <Jumbotron fullHeight src="/images/clarinets.jpg">
           <JumboMessage>
             <JumboHeader size="huge" as={'h1'} inverted>
               Sydney Clarinet Choir
@@ -35,9 +36,9 @@ const IndexPage = () => (
       </div>
       <Container>
         <h1>News</h1>
-        <p>coming soon...</p>
+        <NewsPreview />
 
-        <Jumbotron src="https://st4.depositphotos.com/1020618/27307/i/450/depositphotos_273076392-stock-photo-clarinet-during-a-classical-concert.jpg">
+        <Jumbotron src="/images/concert1.jpg">
           <JumboMessage>
             <Button as={Link} to="/contact" size="massive">
               Play with SCC
@@ -54,7 +55,7 @@ const IndexPage = () => (
         </Segment> */}
         <Divider hidden />
 
-        <Jumbotron src="https://s3.eu-central-1.amazonaws.com/heek-media/images/industries/music/music-woods-instruments/cover-2.jpg">
+        <Jumbotron src="/images/concert2.jpg">
           <JumboMessage>
             <Button as={Link} to="/contact" color="yellow" size="massive">
               Book SCC

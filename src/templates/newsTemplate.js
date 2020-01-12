@@ -8,9 +8,14 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
+  let foundImage = data.allFile.edges.find(
+    i => i.node.name === frontmatter.featureImage
+  )
+
   return (
     <Layout>
-      <Jumbotron src={frontmatter.featureImage} />
+      <Jumbotron src={foundImage.node.publicURL} />
       <Divider hidden />
       <Container text>
         <h1>{frontmatter.title}</h1>
@@ -40,6 +45,17 @@ export const pageQuery = graphql`
         path
         title
         featureImage
+      }
+    }
+    allFile(filter: { absolutePath: { regex: "/(resources)/" } }) {
+      edges {
+        node {
+          name
+          extension
+          dir
+          modifiedTime
+          publicURL
+        }
       }
     }
   }

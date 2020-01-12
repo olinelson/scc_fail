@@ -2,7 +2,7 @@
 title: 'New Website'
 date: '2019-04-04'
 preview: 'This is preview text, how exciting'
-featureImage: '/images/clarinets.jpg'
+featureImage: 'clarinets'
 path: '/news/new-website'
 ---
 

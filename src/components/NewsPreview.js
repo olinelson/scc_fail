@@ -18,6 +18,17 @@ export default function NewsPreview() {
           }
         }
       }
+      allFile(filter: { absolutePath: { regex: "/(resources)/" } }) {
+        edges {
+          node {
+            name
+            extension
+            dir
+            modifiedTime
+            publicURL
+          }
+        }
+      }
     }
   `)
 
@@ -32,10 +43,15 @@ export default function NewsPreview() {
             featureImage,
             path,
           } = p.node.frontmatter
-          console.log(featureImage)
+
+          let foundImage = data.allFile.edges.find(
+            i => i.node.name === featureImage
+          )
+
           return (
             <Item onClick={() => navigate(path)}>
-              <Item.Image size="small" src={featureImage} />
+              <Item.Image size="small" src={foundImage.node.publicURL} />
+
               <Item.Content>
                 <Item.Header as="a">{title}</Item.Header>
                 <Item.Meta>{date}</Item.Meta>

@@ -8,7 +8,7 @@ import Header from './header'
 
 import 'semantic-ui-less/semantic.less'
 
-import { SiteContainer } from '../components/styledComponents'
+import { SiteContainer, MobileOnlyDiv } from '../components/styledComponents'
 
 const Layout = ({ children, location }) => (
   <StaticQuery
@@ -35,13 +35,9 @@ const Layout = ({ children, location }) => (
 
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          <Responsive {...Responsive.onlyMobile}>
+          <MobileOnlyDiv>
             <Divider hidden />
-          </Responsive>
-
-          <Responsive {...Responsive.onlyTablet}>
-            <Divider hidden />
-          </Responsive>
+          </MobileOnlyDiv>
 
           <div>{children}</div>
         </div>

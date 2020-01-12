@@ -3,8 +3,8 @@ import React from 'react'
 import { Button, Container } from 'semantic-ui-react'
 import Layout from '../components/layout'
 
-const Recordings = () => (
-  <Layout>
+const Recordings = ({ location }) => (
+  <Layout location={location}>
     <Container>
       <h1>Recordings</h1>
       <p>coming soon...</p>

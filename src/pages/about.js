@@ -4,8 +4,8 @@ import { Button, Container, Item, Image } from 'semantic-ui-react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
 
-const About = () => (
-  <Layout>
+const About = ({ location }) => (
+  <Layout location={location}>
     <Container text>
       <h1>About</h1>
       <p>

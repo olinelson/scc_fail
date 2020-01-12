@@ -27,13 +27,14 @@ import {
 
 const d = new Date()
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
             title
+            siteUrl
           }
         }
       }
@@ -41,6 +42,7 @@ const Layout = ({ children, data }) => (
     render={data => (
       <SiteContainer>
         <div>
+          {console.log(data.site.siteMetadata.siteUrl)}
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
@@ -51,7 +53,7 @@ const Layout = ({ children, data }) => (
 
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          {window.location.pathname !== '/' ? (
+          {location && location.pathname !== '/' ? (
             <Responsive
               as={Divider}
               maxWidth={Responsive.onlyTablet.maxWidth}

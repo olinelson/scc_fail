@@ -21,11 +21,11 @@ import Events from '../components/Events'
 import { Link } from 'gatsby'
 import NewsPreview from '../components/NewsPreview'
 
-const IndexPage = () => (
+const IndexPage = ({ location }) => (
   <>
-    <Layout>
+    <Layout location={location}>
       <div style={{ margin: '0 auto', maxWidth: '100rem' }}>
-        <Jumbotron fullHeight src="/images/clarinets.jpg">
+        <Jumbotron location={location} fullHeight src="/images/clarinets.jpg">
           <JumboMessage>
             <JumboHeader size="huge" as={'h1'} inverted>
               Sydney Clarinet Choir
@@ -38,7 +38,7 @@ const IndexPage = () => (
         <h1>News</h1>
         <NewsPreview />
 
-        <Jumbotron src="/images/concert1.jpg">
+        <Jumbotron location={location} src="/images/concert1.jpg">
           <JumboMessage>
             <Button as={Link} to="/contact" size="massive">
               Play with SCC
@@ -55,7 +55,7 @@ const IndexPage = () => (
         </Segment> */}
         <Divider hidden />
 
-        <Jumbotron src="/images/concert2.jpg">
+        <Jumbotron location={location} src="/images/concert2.jpg">
           <JumboMessage>
             <Button as={Link} to="/contact" color="yellow" size="massive">
               Book SCC

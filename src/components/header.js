@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import {
   Container,
   Menu,
@@ -62,9 +62,9 @@ function Nav({ siteTitle }) {
 
         <Menu borderless fixed="top">
           <Menu.Menu position="left">
-            <LinkedItem to="/">
+            <Menu.Item onClick={() => navigate('/')}>
               <h2>SCC</h2>
-            </LinkedItem>
+            </Menu.Item>
           </Menu.Menu>
           <Menu.Menu position="right">
             <Menu.Item onClick={() => setVisible(!visible)}>

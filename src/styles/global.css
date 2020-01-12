@@ -1,4 +1,8 @@
-/* .slider {
-  max-width: 90vw;
-  margin: auto;
-} */
+@media only screen and (max-width: 60rem) {
+  .slider-control-centerleft {
+    display: none;
+  }
+  .slider-control-centerright {
+    display: none;
+  }
+}

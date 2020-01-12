@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, Container } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import Layout from '../components/layout'
 
 const Recordings = ({ location }) => (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, Container, Item, Image } from 'semantic-ui-react'
+import { Container, Item } from 'semantic-ui-react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
 

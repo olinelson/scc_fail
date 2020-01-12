@@ -35,12 +35,13 @@ const Layout = ({ children, location }) => (
 
           <Header siteTitle={data.site.siteMetadata.title} />
 
-          {location && location.pathname !== '/' ? (
-            <Responsive
-              as={Divider}
-              maxWidth={Responsive.onlyTablet.maxWidth}
-            />
-          ) : null}
+          <Responsive {...Responsive.onlyMobile}>
+            <Divider hidden />
+          </Responsive>
+
+          <Responsive {...Responsive.onlyTablet}>
+            <Divider hidden />
+          </Responsive>
 
           <div>{children}</div>
         </div>

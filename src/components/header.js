@@ -65,15 +65,19 @@ function Nav({ siteTitle }) {
 
   return (
     <>
-      <Responsive {...Responsive.onlyMobile}>{mobileMenu()}</Responsive>
+      <Responsive maxWidth={Responsive.onlyTablet.maxWidth}>
+        {mobileMenu()}
+      </Responsive>
 
-      <Responsive {...Responsive.onlyTablet}>{mobileMenu()}</Responsive>
+      {/* <Responsive {...Responsive.onlyTablet}>{mobileMenu()}</Responsive> */}
 
-      <Responsive {...Responsive.onlyComputer}>{fullMenu()}</Responsive>
+      <Responsive minWidth={Responsive.onlyTablet.maxWidth}>
+        {fullMenu()}
+      </Responsive>
 
-      {/* <Responsive {...Responsive.onlyLargeScreen}>{fullMenu()}</Responsive> */}
+      {/* <Responsive {...Responsive.onlyLargeScreen}>{fullMenu()}</Responsive>
 
-      {/* <Responsive {...Responsive.onlyWidescreen}>{fullMenu()}</Responsive> */}
+      <Responsive {...Responsive.onlyWidescreen}>{fullMenu()}</Responsive> */}
     </>
   )
 }

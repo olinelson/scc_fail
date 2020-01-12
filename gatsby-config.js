@@ -3,7 +3,7 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     title: 'Sydney Clarinet Choir',
-    siteURL: 'https://olinelson.github.io/scc',
+    siteURL: 'https://olinelson.github.io',
   },
   pathPrefix: '/scc',
   plugins: [

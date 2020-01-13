@@ -78,8 +78,9 @@ const About = ({ location }) => (
       <h4>Core Group</h4>
       <ul>
         <li>Deborah de Graaff (musical director)</li>
-        <li> Peter Dart (associate musical director)</li>
-        <li>Ben Curry-Hyde, Doug Farrington (treasurer)</li>
+        <li>Peter Dart (associate musical director)</li>
+        <li>Doug Farrington (treasurer)</li>
+        <li>Ben Curry-Hyde</li>
         <li>Nicki Frampton</li>
         <li>Katie James</li>
         <li>Tanya Poyitt</li>

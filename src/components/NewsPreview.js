@@ -39,6 +39,7 @@ export default function NewsPreview() {
 
   return (
     <>
+      <h1>News</h1>
       <Item.Group>
         {data.allMarkdownRemark.edges.map(p => {
           const {

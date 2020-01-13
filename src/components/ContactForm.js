@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button, Message } from 'semantic-ui-react'
+import { Form, Button, Message, Container } from 'semantic-ui-react'
 
 export default function ContactForm() {
   const [status, setStatus] = useState('')
@@ -29,55 +29,57 @@ export default function ContactForm() {
   }
 
   return (
-    <Form
-      style={{ margin: 'auto auto' }}
-      onSubmit={ev => submitForm(ev)}
-      action="https://formspree.io/mlejevka"
-      method="POST"
-      error={status === 'ERROR'}
-      success={status === 'SUCCESS'}
-    >
-      <h1>Contact</h1>
-      <Form.Input
-        required
-        label="Full Name"
-        name="name"
-        placeholder="Wolfgang Amadeus Mozart"
-      />
-      <Form.Input
-        required
-        label="Email"
-        name="email"
-        type="email"
-        placeholder="wolfy@gmail.com"
-      />
-      <Form.Input
-        required
-        label="Phone Number"
-        name="phone"
-        type="phone"
-        placeholder="0400123123"
-      />
+    <Container text>
+      <Form
+        style={{ margin: 'auto auto' }}
+        onSubmit={ev => submitForm(ev)}
+        action="https://formspree.io/mlejevka"
+        method="POST"
+        error={status === 'ERROR'}
+        success={status === 'SUCCESS'}
+      >
+        <h1>Contact</h1>
+        <Form.Input
+          required
+          label="Full Name"
+          name="name"
+          placeholder="Wolfgang Amadeus Mozart"
+        />
+        <Form.Input
+          required
+          label="Email"
+          name="email"
+          type="email"
+          placeholder="wolfy@gmail.com"
+        />
+        <Form.Input
+          required
+          label="Phone Number"
+          name="phone"
+          type="phone"
+          placeholder="0400123123"
+        />
 
-      <Form.TextArea
-        required
-        name="message"
-        label="Message"
-        placeholder="Type your message here..."
-      />
-      <Button loading={buttonLoading} disabled={buttonDisabled} type="submit">
-        Send
-      </Button>
-      <Message
-        success
-        header="Message Sent"
-        content="Your email has been sent. Thankyou"
-      />
-      <Message
-        error
-        header="Action Forbidden"
-        content="Something went wrong, please try again..."
-      />
-    </Form>
+        <Form.TextArea
+          required
+          name="message"
+          label="Message"
+          placeholder="Type your message here..."
+        />
+        <Button loading={buttonLoading} disabled={buttonDisabled} type="submit">
+          Send
+        </Button>
+        <Message
+          success
+          header="Message Sent"
+          content="Your email has been sent. Thankyou"
+        />
+        <Message
+          error
+          header="Action Forbidden"
+          content="Something went wrong, please try again..."
+        />
+      </Form>
+    </Container>
   )
 }

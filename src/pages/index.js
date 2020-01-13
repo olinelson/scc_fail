@@ -1,12 +1,6 @@
 import React from 'react'
 
-import { Button, Container, Divider } from 'semantic-ui-react'
-import Layout from '../components/layout'
-
-import clarinetsImage from '../images/resources/clarinets.jpg'
-import concert1Image from '../images/resources/concert1.jpg'
-import concert2Image from '../images/resources/concert2.jpg'
-
+// components
 import {
   Jumbotron,
   JumboMessage,
@@ -15,6 +9,13 @@ import {
 import Events from '../components/Events'
 import { Link } from 'gatsby'
 import NewsPreview from '../components/NewsPreview'
+import { Button, Container, Divider } from 'semantic-ui-react'
+import Layout from '../components/layout'
+
+// images
+import clarinetsImage from '../images/resources/clarinets.jpg'
+import concert1Image from '../images/resources/concert1.jpg'
+import concert2Image from '../images/resources/concert2.jpg'
 
 const IndexPage = ({ location }) => (
   <>
@@ -29,9 +30,11 @@ const IndexPage = ({ location }) => (
         </Jumbotron>
         <Divider hidden />
       </div>
+
       <Container>
-        <h1>News</h1>
         <NewsPreview />
+
+        <Divider hidden />
 
         <Jumbotron location={location} src={concert1Image}>
           <JumboMessage>
@@ -44,10 +47,6 @@ const IndexPage = ({ location }) => (
         <Events />
 
         <Divider hidden />
-
-        {/* <Segment textAlign="center">
-          <Button>Play with SCC</Button>
-        </Segment> */}
         <Divider hidden />
 
         <Jumbotron location={location} src={concert2Image}>

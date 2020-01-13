@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { Link, navigate } from 'gatsby'
-import { Menu, Responsive, Sidebar, Icon } from 'semantic-ui-react'
+import { Menu, Sidebar, Icon } from 'semantic-ui-react'
 import { MobileOnlyDiv, DesktopOnlyDiv } from '../components/styledComponents'
-
-import styled from 'styled-components'
 
 function Nav({ siteTitle }) {
   const [visible, setVisible] = useState(false)
@@ -71,10 +69,6 @@ function Nav({ siteTitle }) {
       <MobileOnlyDiv>{mobileMenu()}</MobileOnlyDiv>
 
       <DesktopOnlyDiv>{fullMenu()}</DesktopOnlyDiv>
-
-      {/* <Responsive {...Responsive.onlyLargeScreen}>{fullMenu()}</Responsive>
-
-      <Responsive {...Responsive.onlyWidescreen}>{fullMenu()}</Responsive> */}
     </>
   )
 }

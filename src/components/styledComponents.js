@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Header } from 'semantic-ui-react'
+import { Header, Container } from 'semantic-ui-react'
 
 export const JumboHeader = styled(Header)`
   font-size: 5rem;
@@ -9,19 +9,17 @@ export const JumboHeader = styled(Header)`
 `
 
 export const Jumbotron = styled.div`
-    background-position: ${props =>
-      props.right ? 'right 15vw top 0% !important' : 'center'};
-    background-size: ${props =>
-      props.contain ? 'contain !important' : 'cover !important'};
-    background-repeat: no-repeat !important;
-    // background: ${props => `url('${props.src}')`};
-    // to work with  github /scc hosting
-    background: ${props => `url('${props.src}')`};
-      
-
-
-     height: ${props => (props.fullHeight ? '85vh !important' : '50vh')};
-    display: grid;
+  background-position: ${props =>
+    props.right ? 'right 15vw top 0% !important' : 'center'};
+  background-size: ${props =>
+    props.contain ? 'contain !important' : 'cover !important'};
+  background-repeat: no-repeat !important;
+  background: ${props => `url('${props.src}')`};
+  height: ${props => (props.fullHeight ? '85vh !important' : '50vh')};
+  display: grid;
+  @media only screen and (max-width: 1024px) {
+    margin-top: -1rem;
+  }
 }
 `
 export const JumboMessage = styled.div`
@@ -55,4 +53,19 @@ export const DesktopOnlyDiv = styled.div`
   @media only screen and (min-width: 1024px) {
     display: block;
   }
+`
+
+export const GridContainer = styled(Container)`
+  min-height: 50vh;
+  display: grid !important;
+  align-content: center;
+  justify-items: center;
+`
+export const CarouselImage = styled.div`
+  background: url(${props => props.src});
+  height: 50vh;
+  width: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 `

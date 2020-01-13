@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { Container, Divider } from 'semantic-ui-react'
 import { Jumbotron } from '../components/styledComponents'
+
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
@@ -23,13 +24,6 @@ export default function Template({
         <h1>{frontmatter.title}</h1>
         <small>{frontmatter.date}</small>
         <Divider hidden />
-        {/* <Item>
-          <Item.Image size="small" src={frontmatter.featureImage} />
-          <Item.Content>
-            <Item.Header as="a">{frontmatter.title}</Item.Header>
-            <Item.Meta>{frontmatter.date}</Item.Meta>
-          </Item.Content>
-        </Item> */}
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}

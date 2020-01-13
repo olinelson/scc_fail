@@ -1,12 +1,10 @@
 import React from 'react'
 
 import { Icon } from 'semantic-ui-react'
-
 import styled from 'styled-components'
-
 import { graphql, useStaticQuery } from 'gatsby'
-
 import Carousel from 'nuka-carousel'
+import { CarouselImage } from '../components/styledComponents'
 
 export default function CarouselComponent() {
   const data = useStaticQuery(graphql`
@@ -30,18 +28,9 @@ export default function CarouselComponent() {
     }
   `)
 
-  let siteURL = data.site.siteMetadata.siteURL
+  const siteURL = data.site.siteMetadata.siteURL
 
   const images = data.allFile.edges
-
-  const CarouselImage = styled.div`
-    background: url(${props => props.src});
-    height: 50vh;
-    width: auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  `
 
   return (
     <Carousel

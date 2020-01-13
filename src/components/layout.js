@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, Link } from 'gatsby'
-import { Container, Icon, Divider, Responsive, List } from 'semantic-ui-react'
+import { Container, Icon, Divider, List } from 'semantic-ui-react'
 
 import Header from './header'
 
@@ -10,7 +10,7 @@ import 'semantic-ui-less/semantic.less'
 
 import { SiteContainer, MobileOnlyDiv } from '../components/styledComponents'
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

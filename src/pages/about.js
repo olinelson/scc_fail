@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Container, Item } from 'semantic-ui-react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
+import { Container, Item } from 'semantic-ui-react'
 
 const About = ({ location }) => (
   <Layout location={location}>

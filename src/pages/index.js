@@ -20,16 +20,14 @@ import concert2Image from '../images/resources/concert2.jpg'
 const IndexPage = ({ location }) => (
   <>
     <Layout location={location}>
-      <div style={{ margin: '0 auto', maxWidth: '100rem' }}>
-        <Jumbotron location={location} fullHeight src={clarinetsImage}>
-          <JumboMessage>
-            <JumboHeader size="huge" as={'h1'} inverted>
-              Sydney Clarinet Choir
-            </JumboHeader>
-          </JumboMessage>
-        </Jumbotron>
-        <Divider hidden />
-      </div>
+      <Jumbotron location={location} fullHeight src={clarinetsImage}>
+        <JumboMessage>
+          <JumboHeader size="huge" as={'h1'} inverted>
+            Sydney Clarinet Choir
+          </JumboHeader>
+        </JumboMessage>
+      </Jumbotron>
+      <Divider hidden />
 
       <Container>
         <NewsPreview />

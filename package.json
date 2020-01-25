@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Richard Blechinger <me@blechi.at>",
   "dependencies": {
-    "destyle.css": "^1.0.11",
     "gatsby": "next",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-less": "^2.0.0-beta.5",

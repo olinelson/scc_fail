@@ -10,10 +10,14 @@ export const JumboHeader = styled(Header)`
 
 export const Jumbotron = styled.div`
   border: 3px solid red !important;
+
   background-size: ${props =>
     props.contain ? 'contain !important' : 'cover !important'};
+
   background-repeat: no-repeat !important;
-  background: ${props => `url('${props.src}')`};
+
+  background: ${props => `url("${props.src}")`};
+
   height: ${props => (props.fullHeight ? '85vh !important' : '50vh')};
   display: grid;
   @media only screen and (max-width: 1024px) {

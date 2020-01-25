@@ -20,8 +20,12 @@ import concert2Image from '../images/resources/concert2.jpg'
 const IndexPage = ({ location }) => (
   <>
     {/* minor change */}
-    <Layout location={location}>
-      <Jumbotron location={location} fullHeight src={clarinetsImage}>
+    <Layout>
+      <Jumbotron
+        style={{ border: '3px solid red !important' }}
+        fullHeight
+        src={clarinetsImage}
+      >
         <JumboMessage>
           <JumboHeader size="huge" as={'h1'} inverted>
             Sydney Clarinet Choir
@@ -35,7 +39,7 @@ const IndexPage = ({ location }) => (
 
         <Divider hidden />
 
-        <Jumbotron location={location} src={concert1Image}>
+        <Jumbotron src={concert1Image}>
           <JumboMessage>
             <Button as={Link} to="/contact" size="massive">
               Play with SCC
@@ -48,7 +52,7 @@ const IndexPage = ({ location }) => (
         <Divider hidden />
         <Divider hidden />
 
-        <Jumbotron location={location} src={concert2Image}>
+        <Jumbotron src={concert2Image}>
           <JumboMessage>
             <Button as={Link} to="/contact" color="yellow" size="massive">
               Book SCC

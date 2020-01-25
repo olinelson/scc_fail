@@ -17,9 +17,8 @@ import clarinetsImage from '../images/resources/clarinets.jpg'
 import concert1Image from '../images/resources/concert1.jpg'
 import concert2Image from '../images/resources/concert2.jpg'
 
-const IndexPage = ({ location }) => (
+const IndexPage = () => (
   <>
-    {/* minor change */}
     <Layout>
       <Jumbotron fullHeight src={clarinetsImage}>
         <JumboMessage>

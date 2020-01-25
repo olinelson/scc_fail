@@ -19,6 +19,7 @@ import concert2Image from '../images/resources/concert2.jpg'
 
 const IndexPage = ({ location }) => (
   <>
+    {/* minor change */}
     <Layout location={location}>
       <Jumbotron location={location} fullHeight src={clarinetsImage}>
         <JumboMessage>

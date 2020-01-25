@@ -1,3 +1,5 @@
+@import '../../node_modules/destyle.css/destyle.css';
+
 @media only screen and (max-width: 60rem) {
   .slider-control-centerleft {
     display: none;

@@ -28,6 +28,7 @@ const IndexPage = ({ location }) => (
           </JumboHeader>
         </JumboMessage>
       </Jumbotron>
+
       <Divider hidden />
 
       <Container>

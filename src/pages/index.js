@@ -9,7 +9,7 @@ import {
 import Events from '../components/Events'
 import { Link } from 'gatsby'
 import NewsPreview from '../components/NewsPreview'
-import { Button, Container, Divider } from 'semantic-ui-react'
+import { Button, Container, Divider, Image } from 'semantic-ui-react'
 import Layout from '../components/layout'
 
 // images
@@ -20,13 +20,14 @@ import concert2Image from '../images/resources/concert2.jpg'
 const IndexPage = () => (
   <>
     <Layout>
-      <Jumbotron fullHeight src={clarinetsImage}>
+      {/* <Jumbotron fullHeight src={clarinetsImage}>
         <JumboMessage>
           <JumboHeader size="huge" as={'h1'} inverted>
             Sydney Clarinet Choir
           </JumboHeader>
         </JumboMessage>
-      </Jumbotron>
+      </Jumbotron> */}
+      <Image fluid src={clarinetsImage} />
 
       <Divider hidden />
 

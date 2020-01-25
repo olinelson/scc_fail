@@ -21,11 +21,7 @@ const IndexPage = ({ location }) => (
   <>
     {/* minor change */}
     <Layout>
-      <Jumbotron
-        style={{ border: '3px solid red !important' }}
-        fullHeight
-        src={clarinetsImage}
-      >
+      <Jumbotron fullHeight src={clarinetsImage}>
         <JumboMessage>
           <JumboHeader size="huge" as={'h1'} inverted>
             Sydney Clarinet Choir

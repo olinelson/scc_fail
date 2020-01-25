@@ -9,6 +9,7 @@ export const JumboHeader = styled(Header)`
 `
 
 export const Jumbotron = styled.div`
+border: 3px solid red !important;
   background-position: ${props =>
     props.right ? 'right 15vw top 0% !important' : 'center'};
   background-size: ${props =>
@@ -23,9 +24,9 @@ export const Jumbotron = styled.div`
 }
 `
 export const JumboMessage = styled.div`
+  border: 3px solid yellow !important;
   background-color: rgba(0, 0, 0, 0) !important;
   margin: auto;
-  justify-self: ;
   padding: 2rem;
 `
 

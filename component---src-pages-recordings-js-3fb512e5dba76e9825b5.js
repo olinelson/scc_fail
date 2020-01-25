@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"7QEx":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),c=t("yE/o"),o=t("Bl7J");n.default=function(){return l.a.createElement(o.a,null,l.a.createElement(c.a,null,l.a.createElement("h1",null,"Recordings"),l.a.createElement("p",null,"coming soon...")))}}}]);
+//# sourceMappingURL=component---src-pages-recordings-js-3fb512e5dba76e9825b5.js.map

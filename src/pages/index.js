@@ -26,11 +26,11 @@ const IndexPage = ({ location }) => (
         fullHeight
         src={clarinetsImage}
       >
-        {/* <JumboMessage>
+        <JumboMessage>
           <JumboHeader size="huge" as={'h1'} inverted>
             Sydney Clarinet Choir
           </JumboHeader>
-        </JumboMessage> */}
+        </JumboMessage>
       </Jumbotron>
       <Divider hidden />
 

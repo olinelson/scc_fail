@@ -63,6 +63,8 @@ function Nav({ siteTitle }) {
     </Menu>
   )
 
+  return mobileMenu()
+
   return (
     <>
       <Responsive as={'div'} {...Responsive.onlyMobile}>

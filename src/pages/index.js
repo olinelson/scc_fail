@@ -21,13 +21,24 @@ function IndexPage() {
   return (
     <>
       <Layout>
-        <Jumbotron src={concert1Image}>
+        <Segment
+          basic
+          fluid
+          style={{
+            backgroundImage: `url("${clarinetsImage}")`,
+            minHeight: '50vh',
+          }}
+        >
+          <h1>Sydney Clarinet Choir</h1>
+        </Segment>
+
+        {/* <Jumbotron src={concert1Image}>
           <JumboMessage>
             <JumboHeader size="huge" as={'h1'} inverted>
               Sydney Clarinet Choir
             </JumboHeader>
           </JumboMessage>
-        </Jumbotron>
+        </Jumbotron> */}
 
         <Divider hidden />
 

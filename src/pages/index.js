@@ -33,7 +33,7 @@ function IndexPage() {
           <h1>Sydney Clarinet Choir</h1>
         </Segment> */}
 
-        <Jumbotron src={concert1Image}>
+        <Jumbotron src={clarinetsImage}>
           <JumboMessage>
             <JumboHeader size="huge" as={'h1'} inverted>
               Sydney Clarinet Choir

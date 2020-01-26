@@ -20,7 +20,7 @@ import concert2Image from '../images/resources/concert2.jpg'
 const IndexPage = () => (
   <>
     <Layout>
-      <Jumbotron fullHeight src={concert1Image}>
+      <Jumbotron src={concert1Image}>
         <JumboMessage>
           <JumboHeader size="huge" as={'h1'} inverted>
             Sydney Clarinet Choir

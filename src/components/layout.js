@@ -104,19 +104,15 @@ const Layout = ({ children, data }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
 
         <SiteContainer>
-          <div>
-            <MobileOnlyDiv>
-              <Divider hidden />
-            </MobileOnlyDiv>
-
-            <div style={{ margin: '0 auto', maxWidth: '100rem' }}>
-              {children}
-            </div>
+          <div
+            style={{ margin: '0 auto', maxWidth: '100rem', gridArea: 'main' }}
+          >
+            {children}
           </div>
 
-          <Divider hidden />
+          <Divider style={{ gridArea: 'space' }} hidden />
 
-          <div>
+          <div style={{ gridArea: 'footer' }}>
             <Divider hidden />
             <Divider />
             <Divider hidden />

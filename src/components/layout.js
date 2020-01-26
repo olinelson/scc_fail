@@ -114,10 +114,10 @@ const Layout = ({ children, data }) => (
             </div>
           </div>
 
-          <Divider hidden />
-
-          <Divider hidden />
           <div>
+            <Divider hidden />
+            <Divider />
+            <Divider hidden />
             <Container textAlign="center">
               {/* <Image centered size="tiny" src="logos/logo.png" /> */}
               <h4>Sydney Clarinet Choir</h4>

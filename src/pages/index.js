@@ -21,7 +21,7 @@ function IndexPage() {
   return (
     <>
       <Layout>
-        <Segment
+        {/* <Segment
           basic
           fluid
           style={{
@@ -31,15 +31,15 @@ function IndexPage() {
           }}
         >
           <h1>Sydney Clarinet Choir</h1>
-        </Segment>
+        </Segment> */}
 
-        {/* <Jumbotron src={concert1Image}>
+        <Jumbotron src={concert1Image}>
           <JumboMessage>
             <JumboHeader size="huge" as={'h1'} inverted>
               Sydney Clarinet Choir
             </JumboHeader>
           </JumboMessage>
-        </Jumbotron> */}
+        </Jumbotron>
 
         <Divider hidden />
 

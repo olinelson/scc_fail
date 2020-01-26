@@ -10,74 +10,122 @@ import 'semantic-ui-less/semantic.less'
 
 import { SiteContainer, MobileOnlyDiv } from '../components/styledComponents'
 
+// const Layout = ({ children }) => (
+//   <StaticQuery
+//     query={graphql`
+//       query SiteTitleQuery {
+//         site {
+//           siteMetadata {
+//             title
+//             siteURL
+//           }
+//         }
+//       }
+//     `}
+//     render={data => (
+//       <SiteContainer>
+//         <div>
+//           <Helmet
+//             title={data.site.siteMetadata.title}
+//             meta={[
+//               { name: 'description', content: 'Sample' },
+//               { name: 'keywords', content: 'sample, something' },
+//             ]}
+//           />
+
+//           <Header siteTitle={data.site.siteMetadata.title} />
+
+//           <MobileOnlyDiv>
+//             <Divider hidden />
+//           </MobileOnlyDiv>
+
+//           <div style={{ margin: '0 auto', maxWidth: '100rem' }}>{children}</div>
+//         </div>
+
+//         <Divider hidden />
+
+//         <Divider hidden />
+//         <div>
+//           <Container textAlign="center">
+//             {/* <Image centered size="tiny" src="logos/logo.png" /> */}
+//             <h4>Sydney Clarinet Choir</h4>
+
+//             <List horizontal inverted={false} divided link size="small">
+//               <List.Item as={Link} to="/">
+//                 Home
+//               </List.Item>
+//               <List.Item as={Link} to="/about">
+//                 About
+//               </List.Item>
+//               <List.Item as={Link} to="/contact">
+//                 Contact
+//               </List.Item>
+//               <List.Item as={Link} to="/gallery">
+//                 Gallery
+//               </List.Item>
+//               <List.Item as={Link} to="/recordings">
+//                 Recordings
+//               </List.Item>
+//             </List>
+//             <Divider hidden />
+//             <small style={{ color: 'grey' }}>
+//               <Icon name="copyright" />
+//               {new Date().getFullYear()}
+//             </small>
+//             <Divider hidden />
+//           </Container>
+//         </div>
+//       </SiteContainer>
+// )}
+// />
+// )
+
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            siteURL
-          }
-        }
-      }
-    `}
-    render={data => (
-      <SiteContainer>
-        <div>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
-          />
+  <SiteContainer>
+    <div>
+      <Header />
 
-          <Header siteTitle={data.site.siteMetadata.title} />
-
-          <MobileOnlyDiv>
-            <Divider hidden />
-          </MobileOnlyDiv>
-
-          <div style={{ margin: '0 auto', maxWidth: '100rem' }}>{children}</div>
-        </div>
-
+      <MobileOnlyDiv>
         <Divider hidden />
+      </MobileOnlyDiv>
 
+      <div style={{ margin: '0 auto', maxWidth: '100rem' }}>{children}</div>
+    </div>
+
+    <Divider hidden />
+
+    <Divider hidden />
+    <div>
+      <Container textAlign="center">
+        {/* <Image centered size="tiny" src="logos/logo.png" /> */}
+        <h4>Sydney Clarinet Choir</h4>
+
+        <List horizontal inverted={false} divided link size="small">
+          <List.Item as={Link} to="/">
+            Home
+          </List.Item>
+          <List.Item as={Link} to="/about">
+            About
+          </List.Item>
+          <List.Item as={Link} to="/contact">
+            Contact
+          </List.Item>
+          <List.Item as={Link} to="/gallery">
+            Gallery
+          </List.Item>
+          <List.Item as={Link} to="/recordings">
+            Recordings
+          </List.Item>
+        </List>
         <Divider hidden />
-        <div>
-          <Container textAlign="center">
-            {/* <Image centered size="tiny" src="logos/logo.png" /> */}
-            <h4>Sydney Clarinet Choir</h4>
-
-            <List horizontal inverted={false} divided link size="small">
-              <List.Item as={Link} to="/">
-                Home
-              </List.Item>
-              <List.Item as={Link} to="/about">
-                About
-              </List.Item>
-              <List.Item as={Link} to="/contact">
-                Contact
-              </List.Item>
-              <List.Item as={Link} to="/gallery">
-                Gallery
-              </List.Item>
-              <List.Item as={Link} to="/recordings">
-                Recordings
-              </List.Item>
-            </List>
-            <Divider hidden />
-            <small style={{ color: 'grey' }}>
-              <Icon name="copyright" />
-              {new Date().getFullYear()}
-            </small>
-            <Divider hidden />
-          </Container>
-        </div>
-      </SiteContainer>
-    )}
-  />
+        <small style={{ color: 'grey' }}>
+          <Icon name="copyright" />
+          {new Date().getFullYear()}
+        </small>
+        <Divider hidden />
+      </Container>
+    </div>
+  </SiteContainer>
 )
 
 Layout.propTypes = {

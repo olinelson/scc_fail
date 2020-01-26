@@ -19,9 +19,8 @@ import concert2Image from '../images/resources/concert2.jpg'
 
 function IndexPage() {
   return (
-    <>
-      <Layout>
-        {/* <Segment
+    <Layout>
+      {/* <Segment
           basic
           fluid
           style={{
@@ -33,46 +32,45 @@ function IndexPage() {
           <h1>Sydney Clarinet Choir</h1>
         </Segment> */}
 
-        <Jumbotron fullHeight src={clarinetsImage}>
+      <Jumbotron fullHeight src={clarinetsImage}>
+        <JumboMessage>
+          <JumboHeader size="huge" as={'h1'} inverted>
+            Sydney Clarinet Choir
+          </JumboHeader>
+        </JumboMessage>
+      </Jumbotron>
+
+      <Divider hidden />
+
+      <Container>
+        <NewsPreview />
+
+        <Divider hidden />
+
+        <Jumbotron src={concert1Image}>
           <JumboMessage>
-            <JumboHeader size="huge" as={'h1'} inverted>
-              Sydney Clarinet Choir
-            </JumboHeader>
+            <Button as={Link} to="/contact" size="massive">
+              Play with SCC
+            </Button>
+          </JumboMessage>
+        </Jumbotron>
+
+        <Events />
+
+        <Divider hidden />
+        <Divider hidden />
+
+        <Jumbotron src={concert2Image}>
+          <JumboMessage>
+            <Button as={Link} to="/contact" color="yellow" size="massive">
+              Book SCC
+            </Button>
           </JumboMessage>
         </Jumbotron>
 
         <Divider hidden />
-
-        <Container>
-          <NewsPreview />
-
-          <Divider hidden />
-
-          <Jumbotron src={concert1Image}>
-            <JumboMessage>
-              <Button as={Link} to="/contact" size="massive">
-                Play with SCC
-              </Button>
-            </JumboMessage>
-          </Jumbotron>
-
-          <Events />
-
-          <Divider hidden />
-          <Divider hidden />
-
-          <Jumbotron src={concert2Image}>
-            <JumboMessage>
-              <Button as={Link} to="/contact" color="yellow" size="massive">
-                Book SCC
-              </Button>
-            </JumboMessage>
-          </Jumbotron>
-
-          <Divider hidden />
-        </Container>
-      </Layout>
-    </>
+      </Container>
+    </Layout>
   )
 }
 

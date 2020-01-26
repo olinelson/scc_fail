@@ -16,7 +16,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-less',
     'gatsby-transformer-remark',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

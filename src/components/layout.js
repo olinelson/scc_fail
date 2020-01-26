@@ -39,7 +39,7 @@ const Layout = ({ children }) => (
             <Divider hidden />
           </MobileOnlyDiv>
 
-          <div style={{ margin: '0 auto', maxWidth: '100rem' }}>{children}</div>
+          <div>{children}</div>
         </div>
 
         <Divider hidden />

@@ -27,6 +27,7 @@ function IndexPage() {
           style={{
             backgroundImage: `url("${clarinetsImage}")`,
             minHeight: '50vh',
+            backgroundRepeat: 'no-repeat',
           }}
         >
           <h1>Sydney Clarinet Choir</h1>

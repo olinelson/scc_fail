@@ -16,7 +16,7 @@ export const Jumbotron = styled.div`
 
   background-repeat: no-repeat !important;
 
-  background: ${props => `url("${props.src}")`};
+  background-image: ${props => `url("${props.src}")`};
 
   height: ${props => (props.fullHeight ? '85vh !important' : '50vh')};
   display: grid;
@@ -64,7 +64,7 @@ export const GridContainer = styled(Container)`
   justify-items: center;
 `
 export const CarouselImage = styled.div`
-  background: url(${props => props.src});
+  background-image: url(${props => props.src});
   height: 50vh;
   width: auto;
   background-size: contain;

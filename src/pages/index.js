@@ -20,14 +20,14 @@ import concert2Image from '../images/resources/concert2.jpg'
 const IndexPage = () => (
   <>
     <Layout>
-      {/* <Jumbotron fullHeight src={clarinetsImage}>
+      <Jumbotron fullHeight src={clarinetsImage}>
         <JumboMessage>
           <JumboHeader size="huge" as={'h1'} inverted>
             Sydney Clarinet Choir
           </JumboHeader>
         </JumboMessage>
-      </Jumbotron> */}
-      <Image fluid src={clarinetsImage} />
+      </Jumbotron>
+      {/* <Image fluid src={clarinetsImage} /> */}
 
       <Divider hidden />
 

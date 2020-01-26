@@ -114,6 +114,8 @@ const Layout = ({ children, data }) => (
             </div>
           </div>
 
+          <Divider hidden />
+
           <div>
             <Divider hidden />
             <Divider />

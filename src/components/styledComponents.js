@@ -34,7 +34,7 @@ export const JumboMessage = styled.div`
 export const SiteContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 7rem;
+  grid-template-rows: auto auto 1fr 7rem;
   min-height: 100vh;
 `
 

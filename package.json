@@ -10,7 +10,7 @@
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "^2.3.13",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.12",
     "gh-pages": "^2.2.0",
     "less": "^3.8.1",
